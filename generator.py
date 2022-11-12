@@ -9,7 +9,7 @@ async def root():
     return {"message": "Hello Atlantic"}
 
 @app.get("/news/{newselement}")
-async def mynews(news: str):
+async def mynews(newselement: str):
     """print news"""
     chosen_news = newsgen(newselement)
     return {"Relevant News": chosen_news}
