@@ -2,9 +2,6 @@ install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 
-test:
-	python -m pytest -vv test_main.py
-
 format:
 	black *.py
 
@@ -26,8 +23,8 @@ build:
 
 deploy:
 	aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 561744971673.dkr.ecr.us-east-1.amazonaws.com
-	docker build -t deploy-fastapi .
-	docker tag deploy-fastapi:latest 561744971673.dkr.ecr.us-east-1.amazonaws.com/deploy-fastapi:latest
-	docker push 561744971673.dkr.ecr.us-east-1.amazonaws.com/deploy-fastapi:latest
+	docker build -t fastapi_news .
+	docker tag fastapi_news:latest 563280966170.dkr.ecr.us-east-1.amazonaws.com/fastapi_news:latest
+	docker push 563280966170.dkr.ecr.us-east-1.amazonaws.com/fastapi_news:latest
 
 all: install format lint test run build deploy
