@@ -27,4 +27,4 @@ deploy:
 	docker tag fastapi_news:latest 563280966170.dkr.ecr.us-east-1.amazonaws.com/fastapi_news:latest
 	docker push 563280966170.dkr.ecr.us-east-1.amazonaws.com/fastapi_news:latest
 
-all: install format lint test run build deploy
+all: install format lint run build deploy
