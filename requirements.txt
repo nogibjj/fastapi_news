@@ -1,4 +1,3 @@
-
 black
 fastapi
 pytest
