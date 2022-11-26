@@ -4,7 +4,7 @@
 # Containerized FastAPI
 
 `docker build .`
-`docker run -p 127.0.0.1:8080:8080 378c80e24481`
+`docker run -p 127.0.0.1:8080:8080 420869dbac17`
 
 # deployed domain 
 `https://6wwcyqaxeq.us-east-1.awsapprunner.com `
