@@ -4,17 +4,21 @@ import uvicorn
 
 app = FastAPI()
 
-
 @app.get("/")
 async def root():
-    return {"message": "Hello Atlantic"}
+    return {
+        "message": "Good Morning news reader, what do you want to read today? Type in /news/{what are you interested in}"
+    }
 
 
 @app.get("/news/{newselement}")
 async def mynews(newselement: str):
     """print news"""
     chosen_news = newsgen(newselement)
-    return {"Relevant News": chosen_news}
+    if chosen_news == []:
+        return {"We're sorry, we do not have news regarding":newselement}
+    else:
+        return {"Think you are interested in": chosen_news}
 
 
 if __name__ == "__main__":

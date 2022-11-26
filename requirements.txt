@@ -1,7 +1,7 @@
-black
 fastapi
 pytest
 pylint
 uvicorn[standard]
 requests
 bs4
+black==22.10.0

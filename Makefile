@@ -1,6 +1,6 @@
 install:
-	pip install --upgrade pip &&\
-		pip install -r requirements.txt
+	pip3 install --upgrade pip &&\
+		pip3 install -r requirements.txt
 
 format:
 	black *.py
@@ -16,8 +16,10 @@ killweb:
 
 lint:
 	pylint --disable=R,C main.py
-
 	
+test:
+	python -m pytest -vv --cov=main --cov=logic test_*.py
+
 build:
 	docker build -t fastapi_news .
 
@@ -27,4 +29,4 @@ deploy:
 	docker tag fastapi_news:latest 563280966170.dkr.ecr.us-east-1.amazonaws.com/fastapi_news:latest
 	docker push 563280966170.dkr.ecr.us-east-1.amazonaws.com/fastapi_news:latest
 
-all: install format lint run build deploy
+all: install format lint run build deploy test
