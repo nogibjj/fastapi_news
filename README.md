@@ -1,5 +1,5 @@
 # fastapi_news
-[![Python application test with Github Actions](https://github.com//fastapi_news/actions/workflows/main.yml/badge.svg)](https://github.com//fastapi_news/actions/workflows/main.yml)
+[![Python application test with Github Actions](https://github.com/nogibjj/fastapi_news/actions/workflows/badge.svg)](https://github.com//fastapi_news/actions/workflows/main.yml)
 
 # Containerized FastAPI
 
