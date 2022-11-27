@@ -17,7 +17,7 @@ async def mynews(newselement: str):
     chosen_news = newsgen(newselement)[0]
     url = newsgen(newselement)[1]
     if chosen_news == []:
-        return {"We're sorry, we do not have news regarding":newselement}
+        return {"We're so sorry, we currently do not have news regarding":newselement}
     else:
         return {"Think you are interested in": chosen_news, "Go check out":url}
 

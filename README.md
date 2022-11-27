@@ -8,7 +8,7 @@
 
 `docker build .`
 
-`docker run -p 127.0.0.1:8080:8080 378c80e24481`
+`docker run -p 127.0.0.1:8080:8080 61bacb644908`
 
 # Project purpose:
 
