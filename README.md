@@ -25,4 +25,4 @@ More specifically, the project can generate news for readers based on what they 
 
 
 # deployed domain 
-`https://6wwcyqaxeq.us-east-1.awsapprunner.com `
+`https://fsph22snqi.us-east-1.awsapprunner.com/ `

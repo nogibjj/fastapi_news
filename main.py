@@ -14,11 +14,12 @@ async def root():
 @app.get("/news/{newselement}")
 async def mynews(newselement: str):
     """print news"""
-    chosen_news = newsgen(newselement)
+    chosen_news = newsgen(newselement)[0]
+    url = newsgen(newselement)[1]
     if chosen_news == []:
         return {"We're sorry, we do not have news regarding":newselement}
     else:
-        return {"Think you are interested in": chosen_news}
+        return {"Think you are interested in": chosen_news, "Go check out":url}
 
 
 if __name__ == "__main__":
