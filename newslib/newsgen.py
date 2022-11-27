@@ -13,7 +13,7 @@ def newsgen(newselement):
         link_url = link.get("href")
         # Discard "None"
         if link_url:
-            if "/most-popular" in link_url:
+            if "/politics" in link_url:
                 news_urls.append(link_url)
 
     for url in news_urls:
@@ -26,4 +26,4 @@ def newsgen(newselement):
             if newselement in line:
                 key_line.append(line)
 
-    return key_line
+    return key_line, url

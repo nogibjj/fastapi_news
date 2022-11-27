@@ -24,8 +24,6 @@ build:
 	docker build -t fastapi_news .
 
 deploy:
-	aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 433871218094.dkr.ecr.us-east-1.amazonaws.com
-	docker build -t deployfastapi .
 	docker tag deployfastapi:latest 433871218094.dkr.ecr.us-east-1.amazonaws.com/deployfastapi:latest
 	docker push 433871218094.dkr.ecr.us-east-1.amazonaws.com/deployfastapi:latest
 
