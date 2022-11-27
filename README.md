@@ -24,5 +24,10 @@ More specifically, the project can generate news for readers based on what they 
 5. Continous Integration was enabled via Github Actions.
 
 
-# deployed domain 
-`https://6wwcyqaxeq.us-east-1.awsapprunner.com `
+# Deployed domain 
+`https://fsph22snqi.us-east-1.awsapprunner.com/ `
+
+# Example Output
+- for address `https://fsph22snqi.us-east-1.awsapprunner.com/news/abortion`
+<img width="1201" alt="Screen Shot 2022-11-26 at 9 28 41 PM" src="https://user-images.githubusercontent.com/112578755/204116541-76fdb77c-fcf8-4140-b89e-ac92d9d6ef03.png">
+
