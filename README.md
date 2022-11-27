@@ -10,5 +10,19 @@
 
 `docker run -p 127.0.0.1:8080:8080 378c80e24481`
 
+# Project purpose:
+
+The project aims to build a Microservice that is able to reuturn JSON payload, and perform Continuous Integration through Github Actions and configure Build Server to deploy changes on build (Continuous Delivery) using FastAPI, AWS apprunner and Code Build. 
+
+More specifically, the project can generate news for readers based on what they are interested in. The data is scraped via Atlantic news website. It will return a JSON payload containing the news that are relevant to what users want to read. 
+
+# Project process:
+1. News was obtained from Atlantic News website using requests and beautifulsoup package in Python.
+2. FastAPI was leveraged to display the concerning news articles
+3. Using Cloud9 as the environment, the microservice was containerized in AWS ECR and pushed to production using AppRunner
+4. Continuous Delivery was performed using AWS CodeBuild. (via buildspec.yml)
+5. Continous Integration was enabled via Github Actions.
+
+
 # deployed domain 
 `https://6wwcyqaxeq.us-east-1.awsapprunner.com `
